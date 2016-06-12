@@ -76,6 +76,12 @@ TEMPDIR=
 #                             running as ceph client $CEPH_ID. If empty,
 #                             this script will start and stop rbd-mirror
 
+if [ -n "${RBD_MIRROR_USE_EXISTING_CLUSTER}" ]; then
+    # Try to avoid pool name collisions.
+    POOL=${POOL}$$
+    PARENT_POOL=${PARENT_POOL}$$
+fi
+
 #
 # Functions
 #
