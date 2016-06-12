@@ -138,7 +138,7 @@ Package: ceph-mds-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: ceph-mds (= ${binary:Version}), ${misc:Depends}
+Depends: ceph-mds (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for ceph-mds
  Ceph is a massively scalable, open-source, distributed
  storage system that runs on commodity hardware and delivers object,
@@ -169,7 +169,7 @@ Package: ceph-mon-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: ceph-mon (= ${binary:Version}), ${misc:Depends}
+Depends: ceph-mon (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for ceph-mon
  Ceph is a massively scalable, open-source, distributed
  storage system that runs on commodity hardware and delivers object,
@@ -199,7 +199,7 @@ Package: ceph-osd-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: ceph-osd (= ${binary:Version}), ${misc:Depends}
+Depends: ceph-osd (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for ceph-osd
  Ceph is a massively scalable, open-source, distributed
  storage system that runs on commodity hardware and delivers object,
@@ -228,7 +228,7 @@ Package: ceph-fuse-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: ceph-fuse (= ${binary:Version}), ${misc:Depends}
+Depends: ceph-fuse (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for ceph-fuse
  Ceph is a massively scalable, open-source, distributed
  storage system that runs on commodity hardware and delivers object,
@@ -254,7 +254,7 @@ Package: rbd-fuse-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: rbd-fuse (= ${binary:Version}), ${misc:Depends}
+Depends: rbd-fuse (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for rbd-fuse
  Ceph is a massively scalable, open-source, distributed
  storage system that runs on commodity hardware and delivers object,
@@ -279,7 +279,7 @@ Package: rbd-mirror-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: rbd-mirror (= ${binary:Version}), ${misc:Depends}
+Depends: rbd-mirror (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for rbd-mirror
  Ceph is a massively scalable, open-source, distributed
  storage system that runs on commodity hardware and delivers object,
@@ -306,7 +306,7 @@ Package: rbd-nbd-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: rbd-nbd (= ${binary:Version}), ${misc:Depends}
+Depends: rbd-nbd (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for rbd-nbd
  Ceph is a massively scalable, open-source, distributed
  storage system that runs on commodity hardware and delivers object,
@@ -342,7 +342,7 @@ Description: common utilities to mount and interact with a ceph storage cluster
 
 Package: ceph-common-dbg
 Architecture: linux-any
-Depends: ceph-common (= ${binary:Version}), ${misc:Depends}
+Depends: ceph-common (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Conflicts: ceph-client-tools-dbg
 Replaces: ceph-client-tools-dbg,
 	  ceph-test-dbg (<< 9.0.3-1646)
@@ -371,7 +371,7 @@ Description: common utilities to mount and interact with a ceph file system
 
 Package: ceph-fs-common-dbg
 Architecture: linux-any
-Depends: ceph-fs-common (= ${binary:Version}), ${misc:Depends}
+Depends: ceph-fs-common (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Conflicts: ceph-client-tools-dbg
 Replaces: ceph-client-tools-dbg
 Section: debug
@@ -417,7 +417,7 @@ Replaces: librados1-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: librados2 (= ${binary:Version}), ${misc:Depends}
+Depends: librados2 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for librados
  RADOS is a reliable, autonomic distributed object storage cluster
  developed as part of the Ceph distributed storage system.  This is a
@@ -429,7 +429,7 @@ Description: debugging symbols for librados
 Package: librados-dev
 Architecture: linux-any
 Section: libdevel
-Depends: librados2 (= ${binary:Version}), ${misc:Depends}
+Depends: librados2 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Conflicts: librados1-dev, librados2-dev
 Replaces: librados1-dev, librados2-dev
 Description: RADOS distributed object store client library (development files)
@@ -454,7 +454,7 @@ Package: libradosstriper1-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: libradosstriper1 (= ${binary:Version}), ${misc:Depends}
+Depends: libradosstriper1 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for libradosstriper
  libradosstriper is a striping interface built on top of the rados
  library, allowing to stripe bigger objects onto several standard
@@ -488,7 +488,7 @@ Package: librbd1-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: librbd1 (= ${binary:Version}), ${misc:Depends}
+Depends: librbd1 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for librbd1
  RBD is a block device striped across multiple distributed objects
  in RADOS, a reliable, autonomic distributed object storage cluster
@@ -530,7 +530,7 @@ Package: libcephfs1-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: libcephfs1 (= ${binary:Version}), ${misc:Depends}
+Depends: libcephfs1 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libceph1-dbg
 Replaces: libceph1-dbg
 Description: debugging symbols for libcephfs1
@@ -574,7 +574,7 @@ Package: librgw2-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: librgw2 (= ${binary:Version}), ${misc:Depends}
+Depends: librgw2 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for librbd1
  RADOS is a distributed object store used by the Ceph distributed
  storage system.  This package provides a REST gateway to the
@@ -617,7 +617,7 @@ Package: radosgw-dbg
 Architecture: linux-any
 Section: debug
 Priority: extra
-Depends: radosgw (= ${binary:Version}), ${misc:Depends}
+Depends: radosgw (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: debugging symbols for radosgw
  RADOS is a distributed object store used by the Ceph distributed
  storage system.  This package provides a REST gateway to the
@@ -660,7 +660,7 @@ Description: Meta-package for python libraries for the Ceph libraries
 Package: python-rados
 Architecture: linux-any
 Section: python
-Depends: librados2 (= ${binary:Version}), ${misc:Depends}, ${python:Depends}
+Depends: librados2 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}, ${python:Depends}
 Replaces: python-ceph (<< 0.92-1223)
 Breaks: python-ceph (<< 0.92-1223)
 X-Python-Version: >= 2.6
@@ -675,7 +675,7 @@ Description: Python libraries for the Ceph librados library
 Package: python-rbd
 Architecture: linux-any
 Section: python
-Depends: librbd1 (>= ${binary:Version}), ${misc:Depends}, ${python:Depends}
+Depends: librbd1 (>= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}, ${python:Depends}
 Replaces: python-ceph (<< 0.92-1223)
 Breaks: python-ceph (<< 0.92-1223)
 X-Python-Version: >= 2.6
@@ -690,7 +690,7 @@ Description: Python libraries for the Ceph librbd library
 Package: python-cephfs
 Architecture: linux-any
 Section: python
-Depends: libcephfs1 (= ${binary:Version}), ${misc:Depends}, ${python:Depends}
+Depends: libcephfs1 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}, ${python:Depends}
 Replaces: python-ceph (<< 0.92-1223)
 Breaks: python-ceph (<< 0.92-1223)
 X-Python-Version: >= 2.6
@@ -705,7 +705,7 @@ Description: Python libraries for the Ceph libcephfs library
 Package: libcephfs-java
 Section: java
 Architecture: all
-Depends: libcephfs-jni (= ${binary:Version}), ${java:Depends}, ${misc:Depends}
+Depends: libcephfs-jni (= ${binary:Version}), ${java:Depends}, ${misc:Depends}, ${shlibs:Depends}
 Description: Java libraries for the Ceph File System
 
 Package: libcephfs-jni
